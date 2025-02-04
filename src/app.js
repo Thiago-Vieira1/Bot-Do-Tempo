@@ -51,7 +51,7 @@ client.on('interactionCreate', async (interaction) => {
   const { commandName, options } = interaction;
 
   if (commandName === 'clima') {
-    // Aqui você pode adicionar a lógica para buscar a previsão do tempo
+    // Função para buscar o clima da cidade informada
     const cidade = options.getString('cidade');
     try {
       const clima = await pegarClima(cidade);
@@ -60,12 +60,6 @@ client.on('interactionCreate', async (interaction) => {
       await interaction.reply('Desculpe, não consegui obter a previsão do tempo.');
     }
   }
-
-    // Por exemplo, você pode usar uma API de clima para obter os dados
-    // const cidade = interaction.options.getString('cidade');
-    // const previsao = `Previsão do tempo para ${cidade}: Ensolarado com chance de chuva.`;
-
-    // await interaction.reply(previsao);
 });
 
 const all_Commands = [Clima];

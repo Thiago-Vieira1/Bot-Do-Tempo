@@ -18,9 +18,6 @@ export async function pegarClima(cidade) {
         });
 
         const dados = response.data;
-        // console.log(`🌤️ Clima em ${dados.name}: ${dados.weather[0].description}`);
-        // console.log(`🌡️ Temperatura: ${dados.main.temp}°C`);
-        // console.log(`💨 Vento: ${dados.wind.speed} m/s`);
 
         return {
             cidade: dados.name,
